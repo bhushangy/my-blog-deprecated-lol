@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build" # Adjust this if you use a different build command
+  publish = "public"
+
+[context.production.environment]
+  NODE_VERSION = "18" # Specify the Node.js version you want to use in production
+
+[context.branch-deploy.environment]
+  NODE_VERSION = "18" # Specify the Node.js version for branch deploys
+
+[[plugins]]
+  package = "@netlify/plugin-gatsby"
